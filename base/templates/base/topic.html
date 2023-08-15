@@ -1,0 +1,14 @@
+
+
+    <div class="btn btn-dark">Browes Topic</div>
+    <hr>
+    <a href="{% url 'index' %}" class="btn btn-primary">All</a>
+    <hr>
+
+    {% for topic in topics %}
+        <div >
+        
+            <a href="{% url 'index' %}?q={{topic.name}}" class="btn btn-primary">{{topic.name}}</a>
+            <hr>
+        </div>
+    {% endfor %}

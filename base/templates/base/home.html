@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="home-container">
+    <div>
+        {% include 'base/topic.html' %}
+    </div>
+    <div>
+        <a class="btn btn-primary" href="{% url 'createRoom' %}" role="button">Create forum room</a>  <a class="btn btn-primary" href="{% url 'createTopic' %}" role="button">Create topic</a>
+        <hr>
+        {% for room in rooms %}
+            <div class="bg-secondary element-name">
+                <a class="a badge bg-dark text-wrap" href="{% url 'profilePage' room.creator.id%}">Room creator: {{ room.creator }}</a>
+                <a class="a badge bg-dark text-wrap">Forum name: {{room.name}}</a> -- {{room.created_at}} -- <a class="a badge bg-primary text-wrap" href = "{% url 'deleteRoom' room.id %}">Delete</a> <a class="a badge bg-primary text-wrap" href="{% url 'roomPage' room.id %}?q=room.name">join</a>
+                <hr>
+                <a class="a" href="{% url 'index' %}?q={{room.topic.name}}">Topic: {{room.topic}}</a>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div>
+        {% include 'base/acitivity.html' %}
+    </div>
+    
+</div>
+{% endblock content %}
+

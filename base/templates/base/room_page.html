@@ -1,0 +1,49 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="description-forum-name">
+    <h1>Fourm name: {{room.name}} -- Topic name: {{room.topic.name}}</h1>
+    
+</div>
+<div class="room-container">
+    <div>
+        {% include 'base/topic.html' %}
+    </div>
+    <div class="mid-contanier">
+        <div class="comment-wrapper">
+            <h2 >Conversation</h2>
+            <hr>
+            <h3 class="description-room-name">Description</h3>
+            <h3 class="description-room">{{room.description}}</h3>
+            {% for message in roomMessages %}
+                <div class="bg-secondary element-name message-elemet">
+                    
+                    @<a  href = "{% url 'profilePage' message.user.id %}">{{message.user}}</a> {{message.created_at | timesince }} ago
+                    <p class="message">{{message.body}}</p>
+                    <hr>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="comment-form">
+            <form method="POST" action="">
+                {% csrf_token %}
+                <input type="text" name="body" placeholder="Write your message here..." class="text-box-width form-control me-2"/>
+            </form>
+        </div>
+    </div>
+    <!--<div>
+        <h3>Participant<h3>
+            {% for participiant in participiants %}
+                <li>@<a href = "{% url 'profilePage' participiant.id %}">{{participiant }}</a></li><br/>
+            {% endfor %}
+        <hr>
+    </div>-->
+    <div>
+        {% include 'base/acitivity.html' %}
+    </div>
+</div>
+{% endblock content %}
+
+
+

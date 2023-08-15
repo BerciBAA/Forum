@@ -1,0 +1,18 @@
+
+    <div class="btn btn-dark">Recent activity</div>
+    <hr>
+
+    {% for message in roomMessages %}
+        <div class="bg-secondary element-name">
+            <strong class="a badge bg-dark text-wrap">Room name: {{ message.room.name }}</strong>
+            <p class="badge bg-dark text-wrap"><small> {{message.created_at | timesince}}</small></p>
+            <p class="message"><a href="{% url 'profilePage' message.user.id%}">{{message.user}}</a>: {{message.body}} </p>
+            <form action="{% url 'roomPage' message.room.id %}">
+                <input class="btn btn-primary" type="submit" value="View" />
+            </form>
+            <hr>
+        </div>
+    {% endfor %}    
+
+
+

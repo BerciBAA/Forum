@@ -1,0 +1,161 @@
+body{
+    background-color: whitesmoke !important; 
+}
+.container-fluid{
+  
+    padding-top: 10em;
+  
+}
+.navbar-conatiner{
+    background: #233142; 
+    color: #e3e3e3;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar-conatiner > div{
+    align-self: flex-end;
+    
+}
+.a{
+    width: 6rem;
+    color: #e3e3e3;
+    text-decoration: none;
+}
+.a:hover{
+    color: #e3e3e3;
+    text-decoration: none;
+}
+.a:visited{
+    color: #e3e3e3;
+    text-decoration: none;
+}
+.home-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center; 
+}
+.home-container > div:nth-of-type(1){
+    width: 15%;
+}
+.home-container > div:nth-of-type(2){
+
+    width: 60%;
+}
+.home-container > div:nth-of-type(3){
+
+    width: 25%;
+}
+
+.room-container > div:nth-of-type(1){
+    width: 15%;
+}
+.room-container > div:nth-of-type(2){
+
+    width: 60%;
+}
+.room-container > div:nth-of-type(3){
+
+    width: 25%;
+}
+
+.profile-container > div:nth-of-type(1){
+    width: 15%;
+}
+.profile-container > div:nth-of-type(2){
+
+    width: 60%;
+}
+.profile-container > div:nth-of-type(3){
+
+    width: 25%;
+}
+
+.element-name{
+    margin:0.5em;
+    padding:1em;
+    border-radius: 15px;
+}
+
+.message{
+    background-color: white;
+    border-radius: 10px;
+    padding: 0.5em;
+    max-width: 55em;
+    word-break: break-word
+}
+
+.navbar-font-size{
+    font-size: 2em;
+}
+
+.topic{
+   padding: 0.5em;
+   border-radius: 10px;
+}
+
+.room-name{
+    padding: 0.2em;
+    border-radius: 10px;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-content: stretch;
+}
+.profile-container > div{
+    flex-grow: 13;
+}
+.room-container {
+    
+    display: flex;
+    justify-content: center;
+    align-content: stretch;
+}
+.room-container > div{
+    flex-grow: 2;
+}
+
+.text-box-width{
+    width: 100%;
+}
+.description-forum-name{
+    width: 100%;
+    margin-bottom: 3em;
+    padding: 0.2em;
+}
+.description-room-name{
+    width: 100%;
+    padding: 0.2em;
+    border-radius: 10px 10px 0 0;
+    margin-bottom:0;
+    background-color: black;
+    color: #e3e3e3;
+
+}
+.description-room{
+    background-color: #6c757d;
+    color: #e3e3e3;
+    width: 100%;
+    padding: 0.2em;
+    border-radius: 0 0 10px 10px;   
+}
+
+.mid-contanier{
+    width: 50%;
+    margin:0 1em 1em 1em;
+    background-color: lightgoldenrodyellow;
+    padding: 1em;
+    border-radius: 10px;
+}
+.form-contaner{
+    margin: auto;
+    width: 50%;
+    background-color: #e3e3e3;
+    border-radius: 10px;
+    padding: 10px;    
+}
+.submit-btn{
+    margin-top: 0.5em;
+}

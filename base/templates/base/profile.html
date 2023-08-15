@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+
+<div class="profile-container">
+    <div>
+        {% include 'base/topic.html' %}
+    </div>
+    <div class="text-center">
+        <h1>Username: {{user.username}}</h1>
+       <h3>User forum rooms to which the user has commented:</h3>
+        {% for room in rooms %}
+            <div class="bg-secondary element-name"><h3>Forum name: <a href="{% url 'roomPage' room.id%}" class="a room-name bg-primary text-wrap">{{room}}</a> </h3></div>
+        {% endfor %}
+    </div>
+    <div>
+        {% include 'base/acitivity.html' %}
+    </div>
+</div>
+
+{% endblock content %}
+
+
